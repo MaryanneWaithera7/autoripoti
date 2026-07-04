@@ -1,20 +1,7 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      {/* Navbar */}
-      <nav className="flex items-center justify-between px-8 py-6">
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight">AutoRipoti</h1>
-          <p className="text-sm text-emerald-400">Know the Car. Own the Truth.</p>
-        </div>
-
-        <div className="hidden gap-6 text-sm text-slate-300 md:flex">
-          <a href="#problem" className="hover:text-white">Problem</a>
-          <a href="#solution" className="hover:text-white">Solution</a>
-          <a href="#pricing" className="hover:text-white">Pricing</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
-        </div>
-      </nav>
+      
 
       {/* Hero Section */}
       <section className="px-8 py-20 text-center">
@@ -113,9 +100,9 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="bg-slate-900 px-8 py-20">
         <div className="mx-auto max-w-5xl text-center">
-          <h3 className="text-3xl font-bold">Simple pricing for early users.</h3>
+          <h3 className="text-3xl font-bold">Choose the report that fits your verification needs.</h3>
           <p className="mt-4 text-slate-300">
-            Start with pay-per-report. Dealer and enterprise plans will come later.
+            Start with a simple vehicle history check for KES 500, or request a more detailed report for up to KES 2,000.
           </p>
 
           <div className="mx-auto mt-10 max-w-md rounded-3xl border border-emerald-500 bg-slate-950 p-8">
@@ -124,7 +111,7 @@ export default function Home() {
             </p>
             <h4 className="mt-4 text-4xl font-bold">KES 500 - 2,000</h4>
             <p className="mt-4 text-slate-400">
-              Price depends on the depth of verification required.
+              Pay only for the level of verification you need before buying a used car. The report will include available information on ownership history, accident history, stolen status, mileage verification, and legal caveats.
             </p>
           </div>
         </div>

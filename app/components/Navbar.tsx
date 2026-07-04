@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between border-b border-slate-800 bg-slate-950 px-8 py-6 text-white">
+    <nav className="flex flex-col gap-5 border-b border-slate-800 bg-slate-950 px-8 py-6 text-white md:flex-row md:items-center md:justify-between">
       <Link href="/" className="block">
         <h1 className="text-2xl font-bold tracking-tight">AutoRipoti</h1>
         <p className="text-sm text-emerald-400">
@@ -10,7 +10,7 @@ export default function Navbar() {
         </p>
       </Link>
 
-      <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+      <div className="flex flex-wrap items-center gap-4 text-sm text-slate-300 md:gap-6">
         <Link href="/" className="hover:text-white">
           Home
         </Link>
@@ -25,6 +25,9 @@ export default function Navbar() {
         </Link>
         <Link href="/contact" className="hover:text-white">
           Contact
+        </Link>
+        <Link href="/login" className="hover:text-white">
+          Login
         </Link>
         <Link
           href="/request-report"

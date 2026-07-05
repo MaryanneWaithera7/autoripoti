@@ -7,21 +7,20 @@ export default function AboutPage() {
         </p>
 
         <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-          Making vehicle history verification simple,clear,and accessible to Kenya's used-car market.
+          Building trust in Kenya's used-car market.
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-slate-300">
-          AutoRipoti is a vehicle history verification platform being built for
-          the Kenyan used-car market. Our goal is to help buyers request clearer
-          vehicle reports before committing their money.
+          AutoRipoti is a vehicle history verification platform 
+          created to help used-car
+           buyers review important vehicle details before 
+          making a purchase decision.
         </p>
 
         <p className="mt-6 text-lg leading-8 text-slate-300">
-          Many used-car buyers face risks such as fake documents, hidden
-          accident damage, stolen vehicle cases, mileage fraud, unclear import
-          details, and unresolved legal caveats. AutoRipoti is being designed to
-          reduce that uncertainty by organizing available verification
-          information into a simple, understandable report.
+          We focus on the risks buyers often worry about most — unclear ownership,
+  hidden accident history, stolen vehicle concerns, mileage fraud, document
+  inconsistencies, and legal red flags.
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">

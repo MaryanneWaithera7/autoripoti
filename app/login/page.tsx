@@ -1,7 +1,64 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter} from "next/navigation"
+
 export default function LoginPage() {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [successMessage, setSuccessMessage] = useState("");
+
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = event.target;
+
+    setFormData((previousData) => ({
+      ...previousData,
+      [name]: value,
+    }));
+  }
+
+  function validateForm() {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email address is required.";
+    } else if (!formData.email.includes("@")) {
+      newErrors.email = "Enter a valid email address.";
+    }
+
+    if (!formData.password.trim()) {
+      newErrors.password = "Password is required.";
+    }
+
+    return newErrors;
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const validationErrors = validateForm();
+    setErrors(validationErrors);
+    setSuccessMessage("");
+
+    if (Object.keys(validationErrors).length > 0) {
+      return;
+    }
+
+   setSuccessMessage("Login successful. Redirecting you to your dashboard...");
+
+setTimeout(() => {
+  router.push("/dashboard");
+}, 1500);
+  }
+
   return (
-    <main className="min-h-screen bg-slate-950 px-8 py-16 text-white">
-      <section className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-center">
+    <main className="min-h-screen bg-slate-950 px-8 py-10 text-white">
+      <section className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-start">
         <div>
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Login
@@ -23,16 +80,22 @@ export default function LoginPage() {
             Enter your details to continue.
           </p>
 
-          <form className="mt-8">
+          <form onSubmit={handleSubmit} className="mt-8">
             <div>
               <label className="block text-sm font-semibold text-slate-300">
                 Email Address
               </label>
               <input
+                name="email"
                 type="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="you@example.com"
                 className="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-emerald-400"
               />
+              {errors.email && (
+                <p className="mt-2 text-sm text-red-400">{errors.email}</p>
+              )}
             </div>
 
             <div className="mt-5">
@@ -40,14 +103,26 @@ export default function LoginPage() {
                 Password
               </label>
               <input
+                name="password"
                 type="password"
+                value={formData.password}
+                onChange={handleChange}
                 placeholder="Enter your password"
                 className="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-emerald-400"
               />
+              {errors.password && (
+                <p className="mt-2 text-sm text-red-400">{errors.password}</p>
+              )}
             </div>
 
+            {successMessage && (
+              <p className="mt-6 rounded-xl border border-emerald-500/40 bg-emerald-500/10 p-4 text-sm text-emerald-400">
+                {successMessage}
+              </p>
+            )}
+
             <button
-              type="button"
+              type="submit"
               className="mt-8 w-full rounded-full bg-emerald-500 px-6 py-3 font-semibold text-slate-950 hover:bg-emerald-400"
             >
               Login

@@ -75,8 +75,7 @@ export default function AdminPage() {
             <div>
               <h2 className="text-2xl font-bold">Report Requests</h2>
               <p className="mt-2 text-slate-400">
-                These are sample requests for now. Later, this table will show
-                real submissions from the request form.
+                View incoming vehicle report requests,payment status, and current review progress.
               </p>
             </div>
 

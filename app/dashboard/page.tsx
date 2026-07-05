@@ -52,8 +52,7 @@ export default function DashboardPage() {
             <div>
               <h2 className="text-2xl font-bold">My Report Requests</h2>
               <p className="mt-2 text-slate-400">
-                These are sample records for now. Later, this section will show
-                real requests from the database.
+                View your submitted vehicle report requests and check their current progress.
               </p>
             </div>
 

@@ -34,7 +34,7 @@ export default function HowItWorksPage() {
         </p>
 
         <h1 className="max-w-4xl text-4xl font-bold leading-tight md:text-6xl">
-          A simple process for checking a vehicle before you commit.
+          How AutoRipoti helps you verify before you buy.
         </h1>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
@@ -59,6 +59,17 @@ export default function HowItWorksPage() {
             </div>
           ))}
         </div>
+        <div className="mt-12 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 p-6">
+  <h2 className="text-2xl font-bold text-emerald-400">
+    Look past the surface
+  </h2>
+
+  <p className="mt-3 leading-7 text-slate-300">
+    A clean-looking car can still carry hidden risks. AutoRipoti helps you slow
+    down the buying process, review key vehicle details, and ask better
+    questions before negotiating, paying, or signing transfer documents.
+  </p>
+</div>
 
         <div className="mt-12 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 p-6">
           <h2 className="text-2xl font-bold text-emerald-400">

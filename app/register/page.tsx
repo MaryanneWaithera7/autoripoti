@@ -1,4 +1,4 @@
-export default function RegisterPage() {
+export default function registerPage() {
   return (
     <main className="min-h-screen bg-slate-950 px-8 py-16 text-white">
       <section className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-center">
@@ -7,10 +7,11 @@ export default function RegisterPage() {
             Create Account
           </p>
 
-          <h1 className="text-4xl font-bold leading-tight md:text-6xl">
+          <h1 className="text-4xl font-bold leading-tight md:text-6xl">        import ... from "../../../app/register/page.js";
             Start your AutoRipoti account.
           </h1>
-
+"../../../app/register/page.js"
+"../../../app/register/page.js"
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
             Create an account to request vehicle checks, track report progress,
             and access completed reports when they are ready.

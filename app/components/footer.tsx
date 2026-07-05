@@ -27,6 +27,15 @@ export default function footer() {
             <Link href="/pricing" className="block hover:text-white">
               Pricing
             </Link>
+            <Link href="/faq" className="block hover:text-white">
+              FAQ
+            </Link>
+            <Link href="/terms" className="block hover:text-white">
+              Terms and Conditions
+            </Link>
+            <Link href="/privacy" className="block hover:text-white">
+              Privacy Policy
+            </Link>
             <Link href="/contact" className="block hover:text-white">
               Contact
             </Link>
@@ -36,6 +45,9 @@ export default function footer() {
         <div>
           <h3 className="font-semibold text-slate-200">Reports</h3>
           <div className="mt-4 space-y-3 text-sm text-slate-400">
+            <Link href="/sample-report" className="block hover:text-white">
+              Sample Report
+            </Link>
             <Link href="/request-report" className="block hover:text-white">
               Request Report
             </Link>
